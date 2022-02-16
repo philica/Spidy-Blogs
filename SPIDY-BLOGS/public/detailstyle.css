@@ -1,0 +1,65 @@
+.dmain {
+   margin: 0 330px; 
+}
+
+.dbloggerInfo {
+    margin-bottom: 50px;
+}
+
+.dcenter {
+    text-align: center; 
+}
+
+.dbloggerAvatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.dauthor{
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.ddate {
+    color: #888;
+    text-align: center;
+}
+
+.dheadline {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ddescription {
+    color: #888;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+}
+
+img {
+    border-radius: 5px;
+}
+
+.headImg {
+    margin-bottom: 16px;
+}
+
+.headlineImg {
+    width: 820;
+    height: 500px;
+}
+
+.dbody {
+    color: #888;
+    font-size: 18px;
+    line-height: 2.5;
+    margin-bottom: 16px;
+}

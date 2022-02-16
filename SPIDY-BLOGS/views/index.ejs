@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head section  -->
+<%- include('../partials/head.ejs') %> 
+
+<body>
+
+    <div class="social">
+        <div><a class="logoLink" href=""><img src="meta.png" alt=""></a></div>
+        <div><a class="logoLink" href=""><img src="instagram.png" alt=""></a></div>
+        <div><a class="logoLink"href=""><img src="github.png" alt=""></a></div>
+        <div><a class="logoLink" href=""><img src="linkedin.png" alt=""></a></div>
+        <div><a class="logoLink" href=""><img src="messenger.png" alt=""></a></div>
+    </div>
+
+    <!-- nav section -->
+    <nav>
+        <div class="navFlex">
+            <div class="navFlex-left">
+                <a class="logoLink" href="/"><img class="logo" src="cobweb.png" alt=""></a>
+            </div>
+            <div class="navFlex-right">
+                <a href="/"><p class="navTxt">HOME</p></a>
+                <a href="#"><p class="navTxt">ABOUT</p></a>
+                <a href=""><p class="navTxt"> BOOKS</p></a>
+                <a href="/login"><p class="navTxt">CREATE</p></a>
+            </div>
+        </div>
+    </nav>
+
+    <% images = ['whitey1.png','blueShapes.png','whitey.png','blueCircle.png','whitey2.png','yellow.png'] %> 
+    <% let i = 4%> 
+
+    <!-- main content -->
+    <div class="main">
+        <!-- header text -->
+        <div class="headerText"><h1>Spidy-Blogs</h1></div>
+
+        <!-- trending topics -->
+        <div class="trending">
+            <div class="trendingLeft">
+                <img class='trendingImg' src="codedUnsplash.jpg" alt="">
+            </div>
+            <div class="trendingRight">
+                <div class='date'>November 13, 2021</div>
+                <div class="trendingHeadline">Introducing WebAPIs Playground - An app to play and learn Web APIs</div>
+                <div class="trendingDescrpition">An API(Application Programming Interface) abstracts many complexities from developers. Without APIs, a developer's life will be miserable </div>
+            </div>
+        </div>
+
+        <!-- blog posts -->
+        <div class="blogPosts">
+            
+            <% if(blogs.length > 0) {%> 
+                <% blogs.forEach(blog => { %> 
+                    
+                        <div class="blog">
+                            <a class="logoLink" href="./<%= blog.id %>"><img class="blogImg" src="<%=images[i]%>" alt=""></a>
+                            <div class="date">March 13, 2021</div>
+                            <div class="blogHeadline"><%= blog.title %> </div>
+                            <div class="blogDescription"><%= blog.snippet %> </div>
+                            <div class="blogCategory"><%= blog.category %></div>
+                            <div class="bloggerInfo">
+                                <div class="infoLeft"><img class="bloggerAvatar" src="blogger.png"></div>
+                                <div class="infoRight">
+                                    <div class="bloggerName"><%= blog.author %></div>
+                                    <div class="bloggerJob"><%= blog.authorJob %></div>
+                                </div> 
+                            </div>
+                            <div class="socialy">
+                                <div><img class="sicon" src="thumbs-up(1).png" alt=""></div>
+                                <div><img class="sicon" src="thumbs-up.png" alt=""></div>
+                            </div>
+                        </div>
+                    
+                    
+                    <% i++ %> 
+                    <% if(i== 5) { i = 0} %> 
+                <% }) %> 
+            <% } %> 
+
+
+            
+
+        </div>
+        
+
+    </div>
+    <div class="foot"><div>2021 ,Made by Philica with inspiration From CSEC ASTU Development Division</div></div>
+</body>
+</html>

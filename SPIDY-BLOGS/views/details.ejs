@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<head>
+    <link rel="stylesheet" href="detailstyle.css">
+</head>
+<!-- body -->
+<body>
+    <!-- navigation section -->
+    <%- include('../partials/nav.ejs') %> 
+    
+    <div class="dmain">
+        <div class="dbloggerInfo">
+            <div class="dcenter">
+                <img class="dbloggerAvatar" src="blogger.png" alt="">
+            </div>
+            <div class="dauthor"><%= blogs.author %> </div>
+            <div class="ddate">July 2, 2021</div>
+        </div>
+
+        <div class="dheadline"><%= blogs.title %> </div>
+        <div class="ddescription"><%= blogs.snippet %> </div>
+        <div class="dcenter headImg">
+            <img class="headlineImg"src="headline.png" alt="">
+        </div>
+        <div class="dcenter dbody"><%= blogs.body %> </div>
+    </div>
+    <div class="foot"><div>2021 ,Made by Philica with inspiration From CSEC ASTU Development Division</div></div>
+</body>
+</html>

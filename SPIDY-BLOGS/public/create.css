@@ -1,0 +1,52 @@
+
+.ccontainer {
+    margin:0 200px 100px;
+}
+
+.cblog {
+    color: #2975e7;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input {
+    border-radius: 10px;
+    height: 50px;
+    width: 450px;
+    border: solid 1px #eaedf1;
+}
+
+input:focus {
+    border-color: #2975e7;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #2975e7;
+    outline: none;
+}
+
+.clabel {
+    color: #31507d;
+    margin-bottom: 16px;
+}
+textarea {
+    border-radius: 10px;
+    height: 400px;
+    width: 600px;
+    border: solid 1px #eaedf1;
+}
+
+.cinfo {
+    margin-bottom: 16px;
+}
+
+button {
+    border-radius: 10px;
+    height: 50px;
+    width: 450px;
+    color: white;
+    background-color: #267fff;
+    border-style: none;
+}

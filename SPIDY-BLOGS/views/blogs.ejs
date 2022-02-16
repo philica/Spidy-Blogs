@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<body>
+    <% images = ['whitey1.png','blueShapes.png','whitey.png','blueCircle.png','whitey2.png','yellow.png'] %> 
+    <% let i = 4%> 
+    <%- include('../partials/nav.ejs') %>
+    <div class="main">
+        <div class="headerText"><h1>All-Blogs</h1></div>
+        <div class="blogPosts">
+            <% if(blogs.length > 0) {%> 
+                <% blogs.forEach(blog => { %> 
+                    
+                        <div class="blog">
+                            <a class="logoLink" href="./<%= blog.id %>"><img class="blogImg" src="<%=images[i]%>" alt=""></a>
+                            <div class="date">March 13, 2021</div>
+                            <div class="blogHeadline"><%= blog.title %> </div>
+                            <div class="blogDescription"><%= blog.snippet %> </div>
+                            <div class="blogCategory"><%= blog.category %></div>
+                            <div class="bloggerInfo">
+                                <div class="infoLeft"><img class="bloggerAvatar" src="blogger.png"></div>
+                                <div class="infoRight">
+                                    <div class="bloggerName"><%= blog.author %></div>
+                                    <div class="bloggerJob"><%= blog.authorJob %></div>
+                                </div> 
+                                <a id="delete" class="logoLink" href="./blogs/<%= blog.id %>" ><img class="ddelete"src="delete.png" alt=""></a>
+                            </div>
+
+                        </div>
+                    
+                    
+                    <% i++ %> 
+                    <% if(i== 5) { i = 0} %> 
+                <% }) %> 
+            <% } %> 
+        </div>
+    </div>
+
+    <div class="foot"><div>2021 ,Made by Philica with inspiration From CSEC ASTU Development Division</div></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<head>
+ <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %> 
+
+    <div class="ccontainer">
+
+        <div class="createBlog">
+            <div class="cblog">CREATE CONTENT</div>
+            <form action="/" method="post">
+                <div class="cinfo">
+                    <div class="clabel"><label for="title">Blog Headline</label></div>
+                    <div class="cinput"><input type="text" id="title" name='title' required ></div>
+                </div>
+                
+                <div class="cinfo">
+                    <div class="clabel"><label for="snippet">Blog Snippet</label></div>
+                    <div class="cinput"><input type="text" id='snippet' name="snippet" required></div>
+                </div>
+                
+    
+                <div class="cinfo">
+                    <div class="clabel"><label for="body">Blog Body</label></div>
+                    <div class="ctext"><textarea id="body" name="body"></textarea></div>
+                </div>
+    
+                <div class="cinfo">
+                    <div class="clabel"><label for="category">Category</label></div>
+                    <div class="cinput"><input type="text" id="category" name="category" required></div>
+                </div>
+    
+                <div class="cinfo">
+                    <div class="clabel"><label for="author">Author</label></div>
+                    <div class="cinput"><input type="text" id="author" name="author" required></div>
+                </div>
+    
+                <div class="cinfo">
+                    <div class="clabel"><label for="authorJob">Author-Job</label></div>
+                    <div class="cinput"><input type="text" id="authorJob" name="authorJob" required></div>
+                </div>
+    
+                <button>Publish</button>
+            </form>
+        </div>
+    </div>
+    <div class="foot"><div>2021 ,Made by Philica with inspiration From CSEC ASTU Development Division</div></div>
+</body>
+</html>
